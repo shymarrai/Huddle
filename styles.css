@@ -188,12 +188,9 @@ footer{
 	}
 	
 .socials{
-	margin-left: 100vw;
-	position:absolute;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	
+	margin-right: -15vw;
+
+
 
 }
 	
