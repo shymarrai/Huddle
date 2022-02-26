@@ -9,6 +9,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+h6 {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-self: center;
+  padding: 10px;
+  color: #ffbd2e;
+  background-color: #fff;
+}
 body {
   background: no-repeat 50% center;
   color: #364869;
