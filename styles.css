@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 body {
-  background: URL("./images/bg-desktop.svg") no-repeat 50% center var(--violet);
+  background: no-repeat 50% center;
   color: #364869;
   font-family: var(--open-sans);
   max-height: 100vh;

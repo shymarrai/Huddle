@@ -14,7 +14,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 <script src="https://kit.fontawesome.com/075cd6e712.js" crossorigin="anonymous"></script>
-  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+  <title>Shymarrai Apps</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -28,18 +28,18 @@ border:none;
 }
   </style>
 </head>
-<body>
+<body onload="rodarImagens()">
 	<header>
-		<img src="./images/Icon_Art (Edit Me).png" alt="Logo" class="animate__animated  logo animate__bounceInDown">
+		<img id="logo" src="./images/Icon_Art (Edit Me).png" alt="Logo" class="animate__animated  logo animate__bounceInDown">
 	</header>
 	<main>
 		<section class="left">
 			<img src="./images/illustration-mockups.svg" class="banner animate__animated animate__rubberBand" alt="illustrations">
 		</section>
 		<section class="right">
-		  <h1 class="animate__animated animate__backInRight ">Uma ferramenta simples<br>para ajudar a gerenciar suas finanças.</h1>
+		  <h1 class="animate__animated animate__backInRight "></h1>
 
-		  <p class="animate__animated animate__backInRight">Estamos abertos para receber feedbacks e melhorar o app para futuras atualizações!! 
+		  <p class="animate__animated animate__backInRight">
 		  <!-- <button class="animate__animated animate__backInRight">Register</button> -->
 		  </p>
 		   
@@ -59,4 +59,41 @@ border:none;
 	</div>
   </footer>
 </body>
+<script>
+	const image = document.getElementById("logo")
+	const title = document.querySelector("h1")
+	const text = document.querySelector("p")
+	const body = document.querySelector("body")
+
+
+	var imagens = [];
+
+	// colocar aqui todas as imagens, seguindo a ordem numérica
+	imagens[0] = "./images/Icon_Art (Edit Me).png";
+	imagens[1] = "./images/icon Lista Listas.png";
+
+	function rodarImagens() {
+		const number = Math.round(Math.random())
+		image.src = imagens[number];
+		if(number === 0 ){
+			title.innerHTML = " Uma ferramenta simples<br>para ajudar a gerenciar suas finanças."
+			text.innerHTML = "Estamos abertos para receber feedbacks e melhorar o app para futuras atualizações!! "
+			body.style.backgroundColor = "#fafafa"
+			body.style.backgroundImage = "URL('./images/bg-desktop.svg')"
+			title.style.color = '#364869'
+			text.style.color = '#364869'
+		}else{
+			title.innerHTML = " Uma ferramenta simples<br>para ajudar a gerenciar suas tarefas."
+			text.innerHTML = "Crie suas notificações, não esqueça de mais nada!! "
+			title.style.color = '#FFF'
+			text.style.color = '#FFF'
+
+			body.style.backgroundColor = "#011627"
+			body.style.backgroundImage = "URL('./images/bg-desktopList.svg')"
+		}
+	}
+
+	rodarImagens();
+
+</script>
 </html>
